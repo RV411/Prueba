@@ -11,9 +11,7 @@ module.exports = {
         };
       }),
     };
-  }
-  
-  ,
+  },
   createUser: async function ({ userInput }) {
     const user = new User({
       nombre: userInput.nombre,
