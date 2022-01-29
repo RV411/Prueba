@@ -1,0 +1,9 @@
+<h1>USUARIOS</h1>
+<ul>
+  <li *ngFor="let user of users | async">
+    {{ user.nombre }}, {{ user.telefono }} ,{{ user.ciudad }},{{ user.pais }} 
+    <button (click)="deleteUser(user._id)">ELIMINAR</button>
+    <button (click)="updateUser(user._id)">EDITAR</button>
+
+  </li>
+</ul>

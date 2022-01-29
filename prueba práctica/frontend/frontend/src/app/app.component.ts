@@ -4,6 +4,7 @@ import { map } from "rxjs/operators";
 
 import { Apollo } from "apollo-angular";
 import gql from "graphql-tag";
+import { User } from './models/user';
 
 
 const GET_USERS = gql`
@@ -84,7 +85,7 @@ const DELETE_USER = gql`
 
 export class AppComponent {
   title = 'frontend';
-  users: Observable<any> | undefined;
+  users: Observable<User[]> =new Observable();
 
   constructor(private apollo: Apollo) {}
 
